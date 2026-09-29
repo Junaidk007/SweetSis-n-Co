@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #F6C6C6;
+  --color-primary-foreground: #3D4930;
+  --color-garden-green: #7FB069;
+  --color-fresh-leaf: #B9D8A0;
+  --color-spring-mist: #F3F8E8;
+  --color-deep-stem: #3D4930;
+  --color-warm-cream: #F4DFD7;
+  --color-card-bg: #FFF9F5;
+  --color-border-subtle: #E7D8D0;
+  --color-muted-text: #6F7564;
+
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+:root {
+  --background: #F3F8E8;
+  --foreground: #3D4930;
+  --primary: #F6C6C6;
+  --primary-foreground: #3D4930;
+  --garden-green: #7FB069;
+  --fresh-leaf: #B9D8A0;
+  --spring-mist: #F3F8E8;
+  --deep-stem: #3D4930;
+  --warm-cream: #F4DFD7;
+  --card: #FFF9F5;
+  --border: #E7D8D0;
+  --muted-foreground: #6F7564;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans), sans-serif;
+  background-color: var(--spring-mist);
+  color: var(--deep-stem);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Serif Headings */
+h1, h2, h3, .font-display {
+  font-family: var(--font-serif), Georgia, serif;
+}
+
+/* Eyebrows */
+.eyebrow {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+/* Subtle custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F3F8E8;
+}
+::-webkit-scrollbar-thumb {
+  background: #E7D8D0;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B9D8A0;
+}
