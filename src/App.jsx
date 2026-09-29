@@ -27,19 +27,27 @@ import { Toast } from "./components/Toast";
 function AppContent() {
   const [isReady, setIsReady] = useState(false);
 
-  useEffect(() => {
-    let mounted = true;
-    // Preload critical hero image before dismissing branded loader
-    preloadImage(HERO_IMAGE_URL, 4000).then(() => {
-      if (mounted) {
-        setIsReady(true);
-      }
-    });
+useEffect(() => {
+  let mounted = true;
 
-    return () => {
-      mounted = false;
-    };
-  }, []);
+  const MIN_LOADER_TIME = 6000; // 6 seconds
+
+  const preload = preloadImage(HERO_IMAGE_URL, 4000);
+
+  const minimumTime = new Promise((resolve) => {
+    setTimeout(resolve, MIN_LOADER_TIME);
+  });
+
+  Promise.all([preload, minimumTime]).then(() => {
+    if (mounted) {
+      setIsReady(true);
+    }
+  });
+
+  return () => {
+    mounted = false;
+  };
+}, []);
 
   return (
     <>

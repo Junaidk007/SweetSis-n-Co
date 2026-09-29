@@ -70,12 +70,22 @@ export function InitialLoader() {
             >
               {/* Blossom petals */}
               <circle cx="50" cy="50" r="42" fill="#F6C6C6" fillOpacity="0.45" />
-              <path
-                d="M50 18 C46 32, 32 46, 18 50 C32 54, 46 68, 50 82 C54 68, 68 54, 82 50 C68 46, 54 32, 50 18 Z"
-                fill="#3D4930"
-              />
-              <circle cx="50" cy="50" r="8" fill="#7FB069" />
-              <circle cx="50" cy="50" r="4" fill="#FFF9F5" />
+              <svg
+                  viewBox="0 0 24 24"
+                  className="w-4 h-4 text-[#3D4930] transition-transform duration-300 group-hover:rotate-12"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M12 2a9 9 0 0 1 9 9c0 4.97-4.03 9-9 9A9 9 0 0 1 3 11" />
+                  <path d="M12 2v20" />
+                  <path d="M12 12c-3.5 0-6-2.5-6-6" />
+                  <path d="M12 12c3.5 0 6 2.5 6 6" />
+                </svg>
+              {/* <circle cx="50" cy="50" r="8" fill="#7FB069" />
+              <circle cx="50" cy="50" r="4" fill="#FFF9F5" /> */}
             </motion.svg>
           </div>
         </motion.div>
